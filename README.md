@@ -1,8 +1,8 @@
-﻿## javascript_study
+﻿# javascript_study
 
-# git add .
-# git commit -m "up"
-# git push
+### git add .
+### git commit -m "up"
+### git push
 
-# git clone
-# git pull
+### git clone
+### git pull
