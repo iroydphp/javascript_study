@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // prompt 의 특성은 모든 값을 문자열로 지정
+         var name = prompt('아이디를 입력하세요.')
+         console.log(name)
+         const admin = 'admin'
+
+         // undefined, null, 빈문자열(''), 0 = False
+
+         if (name === null || name === '') {
+            document.write('<h1>Error 1 : 입력하지 않음</h1>')
+         } else if (name !== admin) {
+            alert('로그인이 되지 않습니다.')
+            document.write('<h1>Error 56 : 아이디가 다름</h1>')
+         } else {
+            alert('로그인 되었습니다.')
+            document.write('<h1>어서오세요 ' + admin + '님</h1>')
+         }
+      </script>
+   </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Growth</title>
+   </head>
+   <body>
+      <script>
+         let num1 = 10
+         let num2 = 20
+         let result
+
+         num1-- // --num1 은 1감소
+         console.log('num1: ', num1)
+         //위에 값이 9 이기에 +1 하면 값은 10
+         num1++ // ++num1 은 1증가
+         console.log('num1: ', num1)
+
+         console.log('===================')
+
+         // 변수에 대입할때 후위 연산자와 전위 연산자의 차이를 알 수 있음.
+         // 후위 연산자 (선대입 / 후연산)
+         result = num2++
+         console.log('result: ', result)
+         console.log('num2: ', num2)
+
+         // 전위 연산자 (선연산 / 후대입)
+         // num2 = 21
+         result = ++num2 // ++(22)
+         console.log('result: ', result)
+         console.log('num2: ', num2)
+      </script>
+   </body>
+</html>

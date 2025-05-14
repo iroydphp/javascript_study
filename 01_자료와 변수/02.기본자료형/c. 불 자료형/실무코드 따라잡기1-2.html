@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>실무코드 따라잡기1</title>
+   </head>
+   <body>
+      <script>
+         // 티켓 예매 조건 : 1장만 예매가능, 오후 15시~23시 예매가능,
+
+         var ticket = prompt('구매하려는 티켓 갯수') // 티켓 예매 갯수
+         //console.log('티켓수량:' + ticket)
+         console.log(typeof Number(ticket))
+         console.log(typeof ticket)
+
+         var time = 16
+
+         // const now = new Date() // 날짜구하기
+         // console.log(now)
+         // const time = now.getHours() // 현재 시간구하기
+         // console.log(time)
+
+         if (Number(ticket) === 1 && time >= 15 && time <= 23) {
+            document.write('예매가 완료되었습니다.')
+         }
+
+         //Number(변수값) 은 안에 있는 값을 숫자 타입 으로 변경해줌
+      </script>
+   </body>
+</html>

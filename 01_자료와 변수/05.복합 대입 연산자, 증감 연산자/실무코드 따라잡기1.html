@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         let list = ''
+
+         list += '<ul>'
+         list += '  <li>Hello</li>'
+         list += '  <li>Javascript</li>'
+         list += '  <li>Python</li>'
+         list += '</ul>'
+
+         console.log(list)
+         document.write(list)
+
+         // 벡틱으로 하기
+
+         let list2 = `
+            <ul>
+                <li>안녕</li>
+                <li>하세</li>
+                <li>요!</li>
+            </ul>
+         `
+         console.log(list2)
+         document.write(list2)
+      </script>
+   </body>
+</html>
