@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         let output = ''
+
+         // i 가 1씩 최대 5번을 1씩 증가함
+         for (let i = 1; i < 5; i++) {
+            // J 가 0부터 최대 i 값만큼 1씩 증가함
+            for (let j = 0; j < i; j++) {
+               // 증가값을 ''에서 '*' 로 추가
+               output += '*'
+            }
+            output += '\n'
+         }
+
+         console.log(output)
+      </script>
+   </body>
+</html>

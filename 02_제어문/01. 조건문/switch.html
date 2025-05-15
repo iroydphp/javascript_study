@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Switch</title>
+   </head>
+   <body>
+      <script>
+         const a = Number(prompt('숫자를 입력하세요.'), 0)
+
+         switch (a % 2) {
+            case 0:
+               alert('짝수 입니다.')
+               location.reload()
+               break
+
+            case 1:
+               alert('홀수 입니다.')
+               location.reload()
+               break
+
+            default:
+               alert('숫자가 아닙니다.')
+               location.reload()
+               break
+         }
+      </script>
+   </body>
+</html>

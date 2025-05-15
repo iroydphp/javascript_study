@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>실무코드 따라잡기</title>
+   </head>
+   <body>
+      <script>
+         // 류상진 학생이 휴학을 했습니다.
+         // 아래 수강 신청한 학생 배열에서 류상진 학생을 제거하세요.
+         const student = ['김영수', '이지혜', '류상진', '박미나', '서한울']
+
+         // indexOf 는 요소에 인덱스 번호를 구해준다.
+         const index = student.indexOf('류상진')
+         console.log('류상진의 idnex:', index)
+
+         if (index === -1) {
+            alert('해당 학생이 존재하지 않습니다.')
+         }
+
+         //student.splice(2, 1)
+         console.log(student)
+      </script>
+   </body>
+</html>
