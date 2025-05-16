@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>함수(function)의 정의와 실행 - 비익명 함수</title>
+   </head>
+   <body>
+      <script>
+         // 1. 함수 정의 (함수 선언)
+         // 함수명: 의미가 있는 이름 작성, 카멜 표기법 사용
+         function octabia(a, b) {
+            return a + b // return 은 값을 실행한 곳에 되돌려줌
+         }
+
+         // 2. 함수 실행 (함수 호출)
+         const result = octabia(10, 89)
+         console.log(`result: `, result)
+
+         // 콘솔에 함수 실행 시 return 값이 있으면 값을 바로 출력
+         console.log(octabia(1, 2))
+
+         // 함수의 타입과 함수 내용 출력 (함수 실행 X)
+         console.log(typeof octabia)
+         console.log(octabia)
+      </script>
+   </body>
+</html>

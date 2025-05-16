@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>함수(function)의 정의와 실행 - 매개 변수</title>
+   </head>
+   <body>
+      <script>
+         // 매개변수가 있지만 return 값이 없는 경우
+         function add(a, b) {
+            console.log('합: ', a + b)
+         }
+         // return 값이 없는 함수를 실행시 받을 값이 없으므로 변수에서 받지 않음
+         add(1, 2)
+         // 함수 자체는 실행이 되지만 return 값이 없어 undefined 라고 출력됨
+         console.log(add(1, 2))
+      </script>
+   </body>
+</html>

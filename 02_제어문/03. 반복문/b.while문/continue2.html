@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Continue - 2</title>
+   </head>
+   <body>
+      <script>
+         // 조건식이 Continue 를 만나면 아래 코드를 실행하지 않고 다시 조건식으로 돌아감
+         // 1~10까지의 수 중 짝수만 더하기
+         let output = 0
+         // 1,2,3,4 .... 10
+         for (let i = 0; i <= 10; i++) {
+            // 홀수를 구하는 방식
+            if (i % 2 === 1) {
+               continue // 홀 수 있때 아래 코드를 실행하지 않고 조건문으로 돌아감
+            }
+
+            output += i
+         }
+
+         console.log(`1~10까지의 숫자 중 짝수만 더한 결과 : ${output}`) // 짝수만 출력
+      </script>
+   </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>함수(function)의 나머지 매개변수</title>
+   </head>
+   <body>
+      <script>
+         function test(first, ...rests) {
+            // console.log(first)
+            // console.log(rests)
+
+            // array.isarray(값) ▶ 값이 배열이면 True ▶ 값이 배열이 아니면 false
+            if (console.log(first)) {
+               console.log(first)
+               console.log('rests 없음')
+            } else if (typeof first === 'number') {
+               console.log(first)
+               console.log('rests 있음:', rests)
+            }
+         }
+         test([52, 273, 32, 103, 275, 24, 57])
+         test(52, 273, 32, 103, 275, 24, 57)
+      </script>
+   </body>
+</html>

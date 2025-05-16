@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Break</title>
+   </head>
+   <body>
+      <script>
+         // 값을 ture 로 주면 무한 반복
+         for (let i = 0; true; i++) {
+            alert(`${i}번째 반복문입니다.`)
+
+            const isContinue = confirm(`계속하시겠습니까?`)
+
+            // 확인을 누르면 실행하지 않음 ! 부정
+            // 취소를 눌러야 실행됨
+            if (!isContinue) {
+               break
+            }
+
+            // break 문을 만나면 아래 alert 코드들은 실행하지 않고 반복문(for)를 빠져나옴
+            alert(`break 아래 코드`)
+         }
+         alert(`프로그램 종료`)
+      </script>
+   </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>함수(function)의 화살표 함수</title>
+   </head>
+   <body>
+      <script>
+         // 화살표 함수는 ES6에서 도입된 새로운 함수
+
+         // 화살표 함수는 function 키워드 대신 => 기호를 사용하여 함수를 정의합니다.
+
+         // example 0: 기본적인 함수
+         function myFunc1(a, b) {
+            return a + b
+         }
+         console.log(myFunc1(1, 2))
+
+         // example 1: 기본적인 화살표 함수
+         const myFunc2 = (a, b) => {
+            return a + b
+         }
+         console.log(myFunc2(1, 2))
+
+         // exapmple A: 매개변수,가 하나인 경우 괄호 생략 가능
+         const myFunc3 = (a, b) => console.log('합: ', a + b)
+         myFunc3(1, 2)
+
+         // example B: 매개변수가 하나인 경우 괄호 생략 가능 + 리턴값도 생략 가능
+         const myFunc4 = (a, b) => a + b
+         console.log(myFunc4(1, 2))
+         /* return */
+
+         // Json 객체 예제
+         const obj = { a: 'one', b: 'two', c: 'three' } // JSON 객체
+         // 화살표 함수로 json 객체 생략 방법
+         const myFunc5 = () => {
+            return obj
+         }
+         console.log(myFunc5())
+      </script>
+   </body>
+</html>
