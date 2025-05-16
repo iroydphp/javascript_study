@@ -23,23 +23,11 @@ HTML, CSS와 연동하여 동적인 웹 페이지를 만드는 방법을 배우�
 -  HTML, CSS와 연동된 미니 프로젝트 예제
 -  코드별 상세 주석 및 설명
 
-## 🗂️ 폴더 구조
-
-```
-01.HTML_CSS/         # HTML, CSS 기초 예제
-02.Javascript/       # 자바스크립트 실습 및 예제
-  └─ example/
-      └─ Javascript_Quiz/
-          └─ 03_함수/
-              └─ 실전퀴즈/
-iroydphp/            # 기타 프로젝트 또는 실습 코드
-```
-
 ## 💡 사용 방법
 
 1. 저장소를 클론(clone)합니다.
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/iroydphp/javascript_study.git
    ```
 2. 각 폴더별로 예제 파일을 열어 직접 코드를 실행하거나 수정해보세요.
 3. 실습 문제를 풀고, 결과를 콘솔 또는 브라우저에서 확인하세요.
