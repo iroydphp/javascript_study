@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>즉시 실행 함수</title>
+   </head>
+   <body>
+      <script>
+         // 즉시 실행 함수
+         // 함수를 따로 실행하지 않고 정의만 해도 실행되는 함수
+         ;(function () {
+            var pi = 3.14 // 지역변수
+            console.log(`파이 값은 ${pi}입니다`)
+         })() // 즉시 실행 함수
+      </script>
+   </body>
+</html>

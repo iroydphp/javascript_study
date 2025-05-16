@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>즉시 실행 함수</title>
+   </head>
+   <body>
+      <script>
+         // 즉시 실행 함수를 사용하지 않을 경우 중복된 함수 이름으로 인해 라이언 개발자가 만든 코드가 출력되지 않고 어피치 개발자가 만든 코드가 출력된다.
+         var num = 100
+
+         // 라이언 개발자
+         function menu() {
+            num += 100
+            alert(num)
+         }
+         menu()
+         // 해당 menu() 함수가 호이스팅으로 인해 아래의 있는 동일한 함수명을 가진 menu()가 호출된다.
+
+         // 어피치 개발자
+
+         function menu() {
+            alert(num)
+         }
+      </script>
+   </body>
+</html>
