@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>콜백(Callback) 함수 - forEach</title>
+   </head>
+   <body>
+      <script>
+         // ✔ forEach() 메서드
+         // 1. 배열의 각 요소에 대해 주어진 함수를 실행하는 메서드
+         // 2. forEach() 메서드는 새로운 배열을 반환하지 않음
+         // 3. forEach() 메서드는 배열의 각 요소에 대해 주어진 함수를 실행함
+         const array1 = ['a', 'b', 'c']
+
+         array1.forEach(function (element, index, array) {
+            // 콜백함수 매개변수의 갯수와 매개변수 이름은 임의대로 정할 수 있음
+            // element: 현재 처리중인 요소
+            // index: 현재 처리중인 요소의 인덱스
+            // array: forEach()가 호출된 배열
+            console.log('index:', index, 'element:', element, 'array:', array)
+         })
+
+         array1.forEach((element, index, array) => console.log('index:', index, 'element:', element, 'array:', array)) // 화살표 함수로도 사용 가능
+      </script>
+   </body>
+</html>

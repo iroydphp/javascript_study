@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>스코프(Scope)</title>
+   </head>
+   <body>
+      <script>
+         // a = 전역변수
+         var a = 1
+         var b = 2
+         // vartest = 지역변수
+         function vartest(a) {
+            var a = a + 1
+            //-----(a : 매개변수) + 1 = 2
+            console.log('지역변수 a: ', a)
+            // 지역변수 a는 매개변수 a로 덮어씌워짐
+            console.log('전역변수 b: ', b)
+            // 전역변수 b는 지역변수 a와는 관계 없음
+            // 전역변수를 지역변수에서 사용가능
+         }
+
+         // 지역변수는 전역변수에서 사용할 수 없음
+         vartest(a) // vartest = 전역변수
+         console.log('전역변수 a: ', a) // console.log(a) // 결과값 : 1
+
+         // console.log('지역변수 a: ', a) // ReferenceError: a is not defined
+         // 지역변수는 전역변수에서 사용할 수 없음
+      </script>
+   </body>
+</html>

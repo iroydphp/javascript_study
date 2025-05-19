@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>콜백(Callback) 함수 - filter, map, forEach 응용</title>
+   </head>
+   <body>
+      <script>
+         let numbers = [1, 2, 3, 4, 5]
+
+         // 배열에서 짝수만 고른 후 제곱한 결과를 출력
+
+         // numbers
+         //     .filter((number) => number % 2 === 0) // 짝수만 고르기
+         //     .map((number) => number * number) // 제곱하기
+         //     .forEach((number) => console.log(number)) // 출력하기
+
+         // 함수의 체이닝 기법
+         let result = numbers
+            .filter((value) => value % 2 === 0) // [2, 4]
+            // 위 결과물에 .map() 을 사용하여 제곱을 구함
+            .map((value) => value * value) // [4, 16]
+            .forEach((value) => console.log(value))
+         // 체이닝이 갯수에 제한 영향을 받지 않음
+
+         // console.log(`map 결과: ${result}`)
+      </script>
+   </body>
+</html>

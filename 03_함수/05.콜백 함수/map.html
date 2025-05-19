@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>콜백(Callback) 함수 - map</title>
+   </head>
+   <body>
+      <script>
+         // 배열의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환합니다.
+
+         const array1 = [1, 4, 9, 16]
+
+         // ES5
+         let vall = array1.map(function (element, index, array) {
+            return element * 2
+         })
+         console.log(vall)
+
+         // ES6 화살표 함수
+         let val2 = array1.map((element) => element * 2)
+         console.log(val2)
+
+         // 전체 배열을 가지고 오지만 추가로 사칙연산 등 다양한 것을 추가할 수 있음.
+
+         // 사용처(응용)
+         // - 상품 목록에서 가격을 10% 할인된 가격으로 보여줄 때
+         // - 상품 목록에서 가격을 10% 비싸게 보여줄 때
+      </script>
+   </body>
+</html>

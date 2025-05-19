@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>블록 변수 - let</title>
+   </head>
+   <body>
+      <script>
+         function logScope() {
+            var local = 2
+            if (local) {
+               var local = '다른 값'
+               // var 변수 선언을 블록 안에서하면 기존 var 변수 값에서 덮어쓰기된다.
+               console.log('블록안에 var:', local) // 블록 안: 다른 값
+            }
+            console.log('Local:', local) // 블록 밖: 다른 값
+         }
+
+         logScope()
+      </script>
+   </body>
+</html>

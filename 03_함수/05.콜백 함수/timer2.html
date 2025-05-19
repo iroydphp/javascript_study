@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>콜백(Callback) 함수 - timer 2</title>
+   </head>
+   <body>
+      <script>
+         let id
+         let count = 0
+         // 변수에 setInterval()의 반환값을 저장합니다.
+         id = setInterval(() => console.log(`1초마다 실행됩니다. (${count++}번 실행)`), 1000)
+
+         // 중지 함수
+         // settimeout 은 오직 n초 후에 딱 한번만 실행됩니다.
+         setTimeout(() => {
+            console.log(`타이머를 종료합니다.`)
+            clearInterval(id) // setInterval()을 중지합니다.
+         }, 5000) // 5초 후에 setInterval()을 중지합니다.
+         //
+      </script>
+   </body>
+</html>

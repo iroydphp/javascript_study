@@ -7,10 +7,40 @@
    </head>
    <body>
       <script>
-         // 콜백 함수 (Callback Function)
+         // ✔ 콜백 함수 (Callback Function)
          // 1. 콜백 함수란 다른 함수의 인자로 전달되는 함수를 의미
          // 2. 콜백 함수는 비동기 처리에 주로 사용됨
          // 3. 콜백 함수는 주로 이벤트 처리, AJAX 요청, 타이머 등에 사용
+
+         // 함수명(function() { // 실행 코드 }) - es6 이전 콜백함수
+         // 함수명(function()=>{ // 실행 코드})  - es6 이후 화살표 콜백함수
+
+         function printNumber(num, callback) {
+            console.log('printNumber 함수의 num:', num)
+            callback(num)
+            // 위 함수명과 달리 해당 callback 함수는 아래 함수를 불러온다.
+         }
+
+         function squareNumber(num) {
+            console.log('squareNumber() 함수의 num:', num * num)
+         }
+         // 분리해서 사용하는 함수를 아래처럼 콜백함수 가능
+
+         printNumber(5, squareNumber)
+
+         // 매개변수 디폴트
+         // printNumber(5, function (num) {
+         //    console.log('squareNumber() 함수의 num:', num * num)
+         // })
+
+         // 화살표 함수 방법 (Function 대신 사용)
+         // printNumber(5, (num) => {
+         //    console.log('squareNumber() 함수의 num:', num * num)
+         // })
+
+         // 콜백함수는 타이머, 이벤트, 네이게이션 등의 n초의 위치추적 같은 기능을 개발할 때 사용할 수 있음.
+
+         // 결과값 printNumber 함수는 5를 출력하고 squareNumber 함수는 25를 출력함.
       </script>
    </body>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>스코프(Scope)</title>
+   </head>
+   <body>
+      <script>
+         // a = 전역변수
+         var a = 1
+         // vartest = 지역변수
+         function vartest(a) {
+            var a = a + 1
+            //-----(a : 매개변수) + 1 = 2
+         }
+
+         // 지역변수 안에 있는 밖에서 변수는 사용할 수 없음
+         vartest(a) // vartest = 전역변수
+         console.log(a) // console.log(a) // 결과값 : 1
+      </script>
+   </body>
+</html>

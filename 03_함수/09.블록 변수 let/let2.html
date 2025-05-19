@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>블록 변수 - let</title>
+   </head>
+   <body>
+      <script>
+         function logScope() {
+            // const, let 도 동일하게 서로 다른 local 변수를 생성
+            let local = 2 // 블록 밖에서 선언한 let 변수
+            if (local) {
+               // 블록 안에서 let 변수를 선언하면 블록 안에서만 유효
+               // 블록 스코프 기준으로는 let 이라도 같은 변수명으로 사용할 수 있음
+               let local = '다른 값'
+               // let 변수 선언을 블록 안에서하면 기존 let 변수 값에서 덮어쓰기되지 않는다.
+               console.log('블록안에 let:', local) // 다른 값
+            }
+            console.log('Local:', local) // 2
+         }
+         logScope()
+      </script>
+   </body>
+</html>

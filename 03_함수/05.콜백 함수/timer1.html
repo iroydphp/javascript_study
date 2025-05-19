@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>콜백(Callback) 함수 - timer 1</title>
+   </head>
+   <body>
+      <script>
+         // setTimeout() 메서드는 지정된 시간(밀리초/ms) 후에 함수를 실행합니다.
+         // setInterval() 메서드는 지정된 시간(밀리초/ms) 마다 함수를 실행합니다.
+
+         // 사용처(응용)
+         // - 사용자가 입력한 시간 후에 알림을 주고 싶을 때
+         // - 사용자가 입력한 시간 후에 특정 작업을 수행하고 싶을 때
+         // - 사용자가 입력한 시간 후에 특정 페이지로 이동하고 싶을 때
+         // - 사용자가 입력한 시간 후에 특정 이벤트를 발생시키고 싶을 때
+
+         // setTimeout(function () {})
+
+         // 특정 시간이 지나서 함수를 실행하고 싶을 때
+         setTimeout(() => {
+            console.log('1초 후에 1번 실행')
+         }, 1000) // 1초 후에 실행
+
+         // --------------------------------------------- //
+
+         let count = 0
+         // setInterval(function () {})
+         // 특정 시간마다 함수를 실행하고 싶을 때
+         // setInterval(() => {
+         //    console.log(`1초 마다 실행 (${count})번째`)
+         //    count++ // 1초마다 count를 증가시킴
+         // }, 1000)
+
+         // 더 짧게 줄이면...
+         setInterval(() => console.log(`1초 마다 실행 (${count++})번째`), 1000)
+      </script>
+   </body>
+</html>

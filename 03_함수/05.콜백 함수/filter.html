@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>콜백(Callback) 함수 - filter</title>
+   </head>
+   <body>
+      <script>
+         // filter() 메서드는 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환합니다.
+
+         const words = ['옷장', '컴퓨터', '냉장고', '식기세척기', '텔레비전', '시계']
+
+         //ES5
+         const result = words.filter(function (word) {
+            // 배열 요소중에서 글자가 4글자 이상인 요소만 모아 배열로 리턴
+            return word.length >= 4
+         })
+         console.log(result)
+
+         //ES6
+         const result2 = words.filter((word) => word.length >= 4)
+         // --------------------------(요소) => (조건식)
+         console.log(result2)
+
+         // 요소가 조건식에 맞는 경우 true를 return 하고 결과값을 표시해줌
+         // 요소가 조건식에 맞지 않는 경우 false를 return 하고 결과값을 표시해줌
+
+         // 사용처(응용)
+         // - 품 목록에서 사용자가 입력한 키워드가 포함된 상품만 보여줄 때
+         // - 사용자가 선택한 카테고리의 상품만 보여줄 때
+         // - 사용자가 선택한 가격대의 상품만 보여줄 때
+         // - 사용자가 선택한 색상의 상품만 보여줄 때
+      </script>
+   </body>
+</html>
