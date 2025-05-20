@@ -14,7 +14,8 @@
                   year: 2020,
                   genre: ['드라마', '로맨스'],
                   episodes: 16,
-                  cast: ['박서준', '김다미'],
+                  // cast: ['박서준', '김다미'],
+                  cast: ['박서준', '김다미', '유재영', '권다미'],
                   synopsis: '편견과 불공정에 맞서 싸우는 청년의 성공 스토리.',
                },
                {
@@ -86,15 +87,42 @@
                   year: 2019,
                   genre: ['좀비', '사극'],
                   episodes: 6,
-                  cast: ['주지훈', '류승룡'],
+                  // cast: ['주지훈', '류승룡'],
+                  cast: ['주지훈', '류승룡', '배두나'],
                   synopsis: '조선 시대에 퍼진 좀비 역병을 막기 위한 왕자의 투쟁을 다룬 이야기.',
                },
             ],
          }
 
+         const dramas = data.result
+         console.log(dramas)
+
          // 1. 드라마 제목, 줄거리, 주연배우만 모두 출력
 
-         // 2.
+         // dramas.forEach((drama) => {
+         //    console.log(drama)
+         //    document.write(`<p> 제목: ${drama.title} | 줄거리: ${drama.synopsis} 주연배우: ${drama.cast} </p>`)
+         // })
+
+         // 1번 문제에서 드라마마다 주연배우 인원이 다르면 어떻게 출력해야할까?
+         // map 을 이용하면 됨
+
+         // dramas.forEach((drama) => {
+         //    console.log(drama)
+         //    document.write(`<p> 제목: ${drama.title} | 줄거리: ${drama.synopsis} 주연배우: ${drama.cast.map((actor) => actor)} </p>`)
+         // })
+
+         // 2. 드라마 장르 중 판타지에 해당하는 드라마 제목만 출력
+
+         // document.write('<hr/>')
+         // document.write(`<h2>판타지 드라마</h2>`)
+
+         // const result1 = dramas.filter((drama) => {
+         //    const genres = drama.genre
+         //    for (const genre of genres) {
+         //       if (genre === '판타지') return true
+         //    }
+         // })
       </script>
    </body>
 </html>
