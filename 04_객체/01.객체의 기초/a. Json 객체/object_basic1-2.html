@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>객체(Object)의 정의</title>
+   </head>
+   <body>
+      <script>
+         // 객체 = 속성 + 기능
+         // json 객체 한쌍의 데이터가 key:value로 이루어져 있다.
+
+         // 주의사항
+         // key는 중복될 수 없다. (중복한다면 나중에 작성된 값으로 덮어씌워진다.)
+         // value는 중복될 수 있다.
+         // key는 문자열로 작성해야 한다.
+         // value는 문자열, 숫자, 불린, 배열, 객체 등 다양한 형태로 작성할 수 있다.
+
+         // this 는 객체를 가리키는 키워드이다.
+         // this는 객체의 속성에 접근할 때 사용된다.
+         // this는 객체의 메소드 안에서만 사용된다.
+         // ex) this.color, this.seater
+
+         let car1 = {
+            // 속성
+            color: '블랙', //key : value
+
+            // 기능
+            seater: 4 + '인승',
+            run: function (status) {
+               // status = true
+               if (status) {
+                  return this.color + '자동차가 달립니다.'
+               }
+            },
+
+            stop: function (status) {
+               // status = true
+               if (status) {
+                  return this.color + '자동차가 멈춥니다.'
+               }
+            },
+         }
+
+         let car2 = {
+            // 속성
+            color: '화이트', //key : value
+
+            // 기능
+            seater: 6 + '인승',
+            run: function (status) {
+               // status = true
+               if (status) {
+                  return this.color + ' 자동차가 달립니다.'
+               }
+            },
+
+            stop: function (status) {
+               // status = true
+               if (status) {
+                  return this.color + ' 자동차가 멈춥니다.'
+               }
+            },
+         }
+
+         // 객체의 속성에 접근하는 방법
+         console.log(car1.color) // 블랙
+         console.log(car1.seater) // 4인승
+         console.log(car1.run(true)) // 4인승
+         console.log(car1.stop(true)) // 4인승
+
+         console.log('----------------------------------')
+
+         console.log(car2.color) // 블랙
+         console.log(car2.seater) // 4인승
+         console.log(car2.run(true)) // 4인승
+         console.log(car2.stop(true)) // 4인승
+      </script>
+   </body>
+</html>

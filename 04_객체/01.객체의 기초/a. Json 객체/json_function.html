@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>객체(Object)의 정의 - 함수</title>
+   </head>
+   <body>
+      <script>
+         const iPhone15 = {
+            model: 'iPhone 15',
+            manufacturer: 'Apple',
+            releaseYear: 2023,
+            colors: ['Black', 'Blue', 'Pink', 'Yellow', 'Green'],
+         }
+         console.log(iPhone15)
+         document.write('<hr/>')
+
+         // Json 객체를 문자열로 변환 (JSON.stringify)
+
+         const jsonString1 = JSON.stringify(iPhone15)
+         console.log(jsonString1)
+         document.write(jsonString1)
+
+         const jsonString2 = JSON.stringify(iPhone15, null, 2)
+         console.log(jsonString2)
+
+         // 문자열 => Json 객체로 변환 (JSON.parse)
+
+         const iPhone15_2 = '{"model":"iPhone 15","manufacturer":"Apple","releaseYear":2023,"colors":["Black","Blue","Pink","Yellow","Green"]}'
+
+         const stringjson = JSON.parse(iPhone15_2)
+         document.write(stringjson)
+         console.log(stringjson)
+      </script>
+   </body>
+</html>
