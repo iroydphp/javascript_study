@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>객체(Object)의 정의 - Date</title>
+   </head>
+   <body>
+      <script>
+         // 날짜 관련 객체
+         var date = new Date(1998, 4, 10)
+         // 날짜를 따로 지정할때는 표기상 +1 이 되므로 계산을 해야한다. (4월로 지정하면 5월로 나옴)
+         console.log(date)
+         // SET : 날짜 수정하기
+         date.setFullYear(1999)
+         date.setMonth(8)
+
+         document.write(`내 생일은 ${date.getFullYear()}년 ${date.getMonth()}월 ${date.getDate()}일`)
+      </script>
+   </body>
+</html>
