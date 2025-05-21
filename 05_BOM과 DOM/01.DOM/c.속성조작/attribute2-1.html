@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>DOM(Document Object Model)의 정의 - Attribute</title>
+   </head>
+   <body>
+      <img class="rect" />
+
+      <script>
+         const rect = document.querySelector('.rect')
+         // 태그의 속성 지정
+         // setAttribute(속성명, 속성값)
+         const src = rect.setAttribute('src', 'https://picsum.photos/400/250')
+         const alt = rect.setAttribute('alt', '랜덤이미지')
+      </script>
+   </body>
+</html>
