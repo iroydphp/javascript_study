@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>이벤트(Event)의 정의 - 키보드 이벤트 : Keyboard_event</title>
+   </head>
+   <body>
+      <h1></h1>
+      <textarea></textarea>
+      <script>
+         // ✔ 키보드 이벤트
+
+         const textarea = document.querySelector('textarea')
+         const h1 = document.querySelector('h1')
+
+         textarea.addEventListener('keyup', () => {
+            // textarea.value > 입력한 값을 가져옴
+            const length = textarea.value.length // 글자수
+            h1.textContent = `글자수: ${length}`
+         })
+      </script>
+   </body>
+</html>

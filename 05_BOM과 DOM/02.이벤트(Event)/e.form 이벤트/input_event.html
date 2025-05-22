@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>이벤트(Event)의 정의 - Form 이벤트 : Input</title>
+   </head>
+   <body>
+      <input type="text" id="my_input" placeholder="텍스트를 입력하세요." />
+      <script>
+         const inputfield = document.querySelector('#my_input')
+
+         // 입력했을때 발생하는 이벤트
+         inputfield.addEventListener('input', (e) => {
+            // console.log(e) // 이벤트 객체 실행
+            // console.log(e.target.value) // 입력한 값을 가져온다.
+            console.log(e.currentTarget.value) // 입력한 값을 가져온다.
+         })
+      </script>
+   </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h1>할 일 목록</h1>
+      <input id="todo" />
+      <button id="add-button">추가하기</button>
+      <div id="todo-list"></div>
+
+      <script>
+         const input = document.querySelector('#todo')
+         const todoList = document.querySelector('#todo-list')
+         const addButton = document.querySelector('#add-button')
+         let keyCount = 0
+
+         // 할 일 추가
+         const addTodo = () => {
+            //-------------trim() : 양 옆에 공백 제거
+            if (input.value.trim() === '') {
+               alert('할 일을 입력해주세요.')
+               return // 함수 종료
+            }
+
+            // 할일 리스트 생성
+            const item = document.createElement('div')
+            const checkbox = document.createElement('input')
+            const text = document.createElement('span')
+            const button = document.createElement('button')
+
+            checkbox.type = 'checkbox'
+            text.textContent = input.value.trim() + ' '
+            button.textContent = '제거하기'
+
+            // 할일 리스트를 식별할 키
+            const key = keyCount
+            keyCount += 1
+
+            // 할일 리스트 수정
+            item.setAttribute('data-key', key) // 식별자 속성 추가
+
+            // item 객체의 하위 객체를 생성
+            item.appendChild(checkbox)
+            item.appendChild(text)
+            item.appendChild(button)
+
+            todoList.appendChild(item) // item 객체 추가
+
+            checkbox.addEventListener('change', (event) => {
+               text.style.textDecoration = event.target.checked ? 'line-through' : ''
+            })
+
+            // 제거하기 버튼 클릭시 할일 제거
+            button.addEventListener('click', () => {
+               removeTodo(key)
+            })
+
+            // 입력 양식의 내용을 비운다.
+
+            input.value = ''
+         }
+         // 할 일 제거
+         const removeTodo = (key) => {
+            // key 값으로 정확한 항목 선택
+            const item = document.querySelector(`[data-key="${key}"]`)
+            if (item) {
+               todoList.removeChild(item)
+            }
+         }
+
+         // 이벤트 연결
+
+         addButton.addEventListener('click', addTodo)
+
+         // 엔터를 눌렀을 때 할일 추가
+
+         input.addEventListener('keyup', (event) => {
+            const ENTER = 13
+            if (event.keyCode === ENTER) {
+               addTodo()
+            }
+         })
+      </script>
+   </body>
+</html>

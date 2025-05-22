@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>이벤트(Event)의 정의 - 포커스 이벤트 : Focus</title>
+      <style>
+         input {
+            padding: 10px;
+            font-size: 16px;
+         }
+
+         input:focus {
+            background-color: lightyellow;
+         }
+      </style>
+   </head>
+   <body>
+      <h3>이름을 입력하세요</h3>
+      <input type="text" id="nameInput" class="nameInput" placeholder="이름 입력" />
+      <script>
+         // 이벤트 실행
+
+         // ----------------------------------------('아이디만 가져옴')
+         // const inputfield = document.getElementById('nameInput')
+         const inputfield = document.querySelector('#nameInput')
+         inputfield.addEventListener('focus', () => {
+            console.log('입력 필드에 포커스가 되었습니다.')
+         })
+      </script>
+   </body>
+</html>

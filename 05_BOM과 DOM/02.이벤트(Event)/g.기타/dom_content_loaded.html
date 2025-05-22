@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <script>
+         // 스크립트를 <head></head> 에 넣을 경우 요소들이 화면에 렌더링 되기전에 요소를 가져오려고 하면 가져오지 못함
+         // 그래서 <body></body> 에 넣거나 DOMContentLoaded 이벤트를 사용해야함
+
+         document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('h1')
+            const label = document.querySelector('label')
+            const input = document.querySelector('input')
+            const button = document.querySelector('button')
+
+            console.log(header)
+            console.log(label)
+            console.log(input)
+            console.log(button)
+         })
+      </script>
+   </head>
+   <body>
+      <h1>제목</h1>
+      <label for="id">아이디</label>
+      <input type="text" id="id" />
+      <button>로그인</button>
+   </body>
+</html>
