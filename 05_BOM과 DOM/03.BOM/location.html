@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>BOM - Location</title>
+   </head>
+   <body>
+      <button onclick="move()">이동</button>
+
+      <script>
+         var local = location.href // 주소
+         console.log(local)
+
+         function move() {
+            location.href = './history.html' // 주소이동
+         }
+
+         var swidth = screen.width
+         var sheight = screen.height
+         var iwidth = window.innerWidth
+         var iheight = window.innerHeight
+
+         console.log(`디스플레이 해상도: width=${swidth}px, height=${sheight}px`)
+         console.log(`뷰포트 해상도: width=${iwidth}px, height=${iheight}px`)
+
+         var naviInfo = navigator.userAgent
+         console.log(naviInfo)
+      </script>
+   </body>
+</html>
