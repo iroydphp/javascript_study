@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Databases : localStorage - 1</title>
+   </head>
+   <body>
+      <script>
+         // 1) 문자열 저장하기 & 불러오기
+
+         // A. 저장
+         // JSON 객체와 동일하게 ('key', 'value') 값을 저장
+         localStorage.setItem('username', '길동')
+         localStorage.setItem('job', '직업')
+
+         // B. 불러오기
+         // 불러올 key 값을 입력
+         const name = localStorage.getItem('username')
+         const job = localStorage.getItem('job')
+         console.log(name)
+
+         // C. 삭제
+         // *Tip) 삭제 > 불러오기 하면 null
+         localStorage.removeItem('username')
+
+         // D. 전체 삭제
+         localStorage.clear()
+      </script>
+   </body>
+</html>
