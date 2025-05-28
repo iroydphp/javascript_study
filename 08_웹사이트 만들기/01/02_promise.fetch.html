@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const options = {
+            method: 'GET',
+            headers: {
+               accept: 'application/json',
+               Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MzI0YjU5MmE5ZjVmY2E1YTg2NGZlNGJhZjI4YmQ5YyIsIm5iZiI6MTc0ODM5MzgwMC4zMzc5OTk4LCJzdWIiOiI2ODM2NWY0OGQ5ZmViOGQyOWNhODc1ZDMiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.khs15z929KxlNjZPfG-1-EBsj4P3hqWsT2051vzNJEs',
+            },
+         }
+
+         /*
+
+          // fetch는 비동기 작업(네트워크 요청 등)을 처리하기 위해 Promise를 사용해서 구현되었습니다.
+          // Promise를 사용하면 비동기 작업의 성공/실패 결과를 쉽게 처리할 수 있고,
+          // .then(), .catch(), async/await 등 다양한 방식으로 결과를 다룰 수 있습니다.
+          // 이를 통해 코드의 가독성과 유지보수성이 높아집니다.
+
+          promise, async -> 비동기
+          서버에 request 해주는 과정은 전부 비동기로 동작하고 있다.
+
+          **왜?**
+
+          서버에 장애가 있거나, 네트워크 상 문제가 발생할때 동기적으로 실행이 된다면
+          사용자는 브라우저가 멈추거나 다른 코드가 실행되지 않는 현상이 발생한다.
+          따라서 비동기적으로 동작하게끔 만들어져 있다.
+
+         */
+
+         const url = 'https://api.themoviedb.org/3/movie/now_playing?language=ko-KR&page=1&region=KR'
+         // async function getPlayingMovies() {}
+         const getPlayingMovies = async (url) => {
+            try {
+               const res = await fetch(url, options)
+               // 서버에서 데이터를 가져올때 일정시간이 소요될 수 있다. (체감되지는 않겠지만..)
+               // console.log(res)
+
+               const data = await res.json() // 만약 await를 사용하지 않는다면 Promise가 반환된다. fatch() 실행을 완료하기까지 기다려야 한다.
+
+               data.results.forEach((result) => {
+                  console.log(result.title)
+                  console.log('-------------------')
+                  console.log(result.id)
+                  console.log('-------------------')
+                  console.log(result.poster_path)
+                  console.log('-------------------')
+                  console.log(result.vote_average)
+                  console.log('-------------------')
+                  console.log(result.overview)
+               })
+            } catch (error) {
+               console.log('에러 발생', error)
+            }
+         }
+
+         getPlayingMovies(url)
+      </script>
+   </body>
+</html>

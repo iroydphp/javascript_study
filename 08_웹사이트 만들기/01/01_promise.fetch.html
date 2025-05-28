@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const options = {
+            // method: 'POST' // 데이터 값을 서버에 전달함
+            method: 'GET', // 불러오는 값 Read (현재 상영중인 영화를 불러옴)
+            headers: {
+               // 나는 JSON 객체로 데이터를 받을거야 라고 서버에게 전달
+               accept: 'application/json',
+               // 보안을 위해서 서버에 같이 전달하는 인증키
+               Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MzI0YjU5MmE5ZjVmY2E1YTg2NGZlNGJhZjI4YmQ5YyIsIm5iZiI6MTc0ODM5MzgwMC4zMzc5OTk4LCJzdWIiOiI2ODM2NWY0OGQ5ZmViOGQyOWNhODc1ZDMiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.khs15z929KxlNjZPfG-1-EBsj4P3hqWsT2051vzNJEs',
+            },
+         }
+
+         // fetch API를 사용하여 request를 요청하는 자바스크립트의 함수
+         // fetch(request 주소, request 할때 서버에 같이 전달되는 옵션)
+         // 'https://api.themoviedb.org/3/movie/' 방식이 동일함
+
+         // ------------------------------------------------------------- 링크 설명 시작
+         // 물음표 뒤에 쿼리스트링: 서버에 보내는 값을(주소에 노출해서 보내는 값 - get 방식)
+         fetch('https://api.themoviedb.org/3/movie/now_playing?language=ko-KR&page=1&region=KR', options)
+            .then((res) => {
+               console.log(res) // response 정보 + 영화 데이터
+               return res.json() // 실제 영화 데이터 리턴
+            })
+            .then((res) => console.log(res)) // 리턴에서 전달되는 값
+            .catch((err) => console.error(err)) // 에러가 발생했을 때 catch로 잡아서 처리
+         // ------------------------------------------------------------- 링크 설명 종료
+      </script>
+   </body>
+</html>
