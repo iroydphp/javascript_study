@@ -36,7 +36,55 @@ main .container {
 
 /* == CONTENT == */
 
+/* == CARD LEGN ERROR == */
+
+main .container .row .card {
+   /* height 길이 수정 */
+   height: 100%;
+}
+
+main .container .row .card a {
+   height: 80%;
+}
+
+main .container .row .card img {
+   height: 100%;
+   object-fit: cover;
+}
+
+/* == DETAIL == */
+
+main .container .movie-detail > ul.movie-info,
+p {
+   margin-bottom: 10px !important;
+}
+
+main .container ul.movie-info {
+   display: flex;
+}
+
+main .container ul.movie-info li {
+   padding-right: 13px;
+}
+
 /* == MEDIA == */
 
-@media all and (max-width: 991px) {
+/* 576px ~ 767px */
+@media (min-width: 576px) and (max-width: 767px) {
+   .col-sm-9 {
+      width: 60%;
+   }
+
+   .col-sm-3 {
+      width: 40%;
+   }
+
+   /* 상세페이지 글자가 2줄로 늘어날 경우 */
+
+   main .container ul.movie-info {
+      display: initial;
+   }
+   main .container ul.movie-info li {
+      padding-bottom: 10px;
+   }
 }
