@@ -21,10 +21,10 @@ const getDetailDrama = async (dramaDetailUrl) => {
       const imgSrc = `https://image.tmdb.org/t/p/w400/${data.poster_path}`
       const rowHtml = `
     <div class="row">
-        <div class="col-md-3">
-            <img src="${imgSrc}" alt="${data.name}" style="width: 300px; height: 100%;"/>
+        <div class="col-sm-3">
+            <img src="${imgSrc}" alt="${data.name}"/>
         </div>
-        <div class="col-md-9">
+        <div class="col-sm-9">
             <h2>${data.name}</h2>
             <p><strong>원제:</strong> ${data.original_name}, ${data.original_language}</p>
             <p><strong>평점:</strong> ${data.vote_average}</p>
